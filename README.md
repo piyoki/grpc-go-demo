@@ -1,1 +1,1 @@
-# grpc-go-demo
+# gRPC Go Demo
