@@ -38,9 +38,9 @@ export PATH=$PATH:$GOPATH/bin
 
 ## Run the Demo
 
-```bash
 Spins up the server
 
+```bash
 go run server.go
 ```
 
