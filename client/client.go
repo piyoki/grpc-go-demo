@@ -14,6 +14,7 @@ const (
 	TARGET_IP = "localhost:9000"
 )
 
+// define the connection to the server
 func main() {
 
 	var conn *grpc.ClientConn
