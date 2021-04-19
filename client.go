@@ -6,7 +6,7 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	"github.com/yqlbu/grpc-go-demo"
+	"github.com/yqlbu/grpc-go-demo/chat"
 )
 
 func main() {
