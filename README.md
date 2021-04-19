@@ -30,6 +30,7 @@ $ go get google.golang.org/protobuf/cmd/protoc-gen-go \
 ```
 
 You will have to ensure that `$GOPATH/bin` is on your environment path so that you can use the `protoc` tool later on in this tutorial.
+Add the following lines to your `.bashrc` or `.zshrc` file
 
 ```bash
 export GOPATH=$(go env GOPATH)
