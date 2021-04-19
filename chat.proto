@@ -8,5 +8,6 @@ message Message {
 }
 
 service ChatService {
+  // Unary Method
   rpc SayHello(Message) returns (Message) {}
 }
