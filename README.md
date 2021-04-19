@@ -49,3 +49,7 @@ Initiate a client connection and send a message to the server
 ```bash
 go run client/client.go
 ```
+
+## Reference
+
+[gRPC Offical Documentation](https://grpc.io/docs/languages/go/quickstart/)
