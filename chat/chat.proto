@@ -1,7 +1,7 @@
 syntax = "proto3";
 package chat;
 
-option go_package = "./";
+option go_package = "github.com/yqlbu/grpc-go-demo/chat";
 
 message Message {
   string body = 1;

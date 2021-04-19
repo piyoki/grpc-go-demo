@@ -5,24 +5,30 @@ import (
 	"log"
 	"net"
 
-	"github.com/yqlbu/grpc-go-demo/chat"
+	pb "github.com/yqlbu/grpc-go-demo/chat"
 	"google.golang.org/grpc"
+)
+
+type server struct {
+	pb.UnimplementedChatServiceServer
+}
+
+const (
+	TARGET_IP = "localhost:9000"
 )
 
 func main() {
 
-	fmt.Println("Go gRPC Beginners Tutorial!")
+	fmt.Printf("Server is listening to %s\n", TARGET_IP)
 
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", 9000))
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
 
-	s := chat.Server{}
-
 	grpcServer := grpc.NewServer()
 
-	chat.RegisterChatServiceServer(grpcServer, &s)
+	pb.RegisterChatServiceServer(grpcServer, &server{})
 
 	if err := grpcServer.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %s", err)
